@@ -2,7 +2,7 @@
 
 **Very much a work in progress**
 
-> The agora (/ˈæɡərə/; Ancient Greek: ἀγορά agorá) was a central public space in ancient Greek city-states. It is the best representation of city form’s response to accommodate the social and political order of the polis.[1] The literal meaning of the word is "gathering place" or "assembly". The agora was the center of the athletic, artistic, spiritual and political life in the city.[2] The Ancient Agora of Athens is the best-known example.
+> The agora (/ˈæɡərə/; Ancient Greek: ἀγορά agorá) was a central public space in ancient Greek city-states. It is the best representation of city form’s response to accommodate the social and political order of the polis. The literal meaning of the word is "gathering place" or "assembly". The agora was the center of the athletic, artistic, spiritual and political life in the city. The Ancient Agora of Athens is the best-known example.
 >
 > -- Wikipedia
 
