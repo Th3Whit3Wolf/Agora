@@ -36,9 +36,38 @@ Want to join us? Take a look at some of these issues:
 * [Issues labeled "good first issue"][good-first-issue]
 * [Issues labeled "help wanted"][help-wanted]
 
-## Design Notes
+## Design Notes 
 
-Agora will be an isomorphic SPA forum. It will take advantage of actix's ([high performance server](https://www.techempower.com/benchmarks/#section=data-r19&hw=ph&test=composite)) ability to handle a lot of request and the fact SPA reduce total number of request to hopefully achieve a program that runs well no matter what it's being ran on. I am also betting on wasm advancements making the frontend faster with time.
+### Frontends
+
+Will use a Web Assembly(wasm) and javascript frontend until I decide which I prefer. Wasm can be written in rust,
+allowing for an isomorphic SPA that can share code between the frontend and backend. This should be easier to write and
+maintain. However right now wasm interaction with the DOM is expensive, compiled wasm can be quite large(even with
+optimizations), and the ecosystem for wasm frontends is quite new. Javascript does not share these issues. Solid-js is
+the current javascript performance king in this domain, trading blows with hand optimized vanillajs, and may provide an
+overall better user experience and will integrate with current web design tools.
+
+* [Seed](https://github.com/seed-rs/seed) (Web Assembly) 
+* [Solid](https://github.com/ryansolid/solid) (Javascript)
+
+#### CSS
+
+Leaning towards [tailwindcss](https://github.com/tailwindlabs/tailwindcss) with
+[linaria](https://github.com/callstack/linaria) to write css in javscript with no runtime cost. Tailwinds is designed to
+be used with PostCSS to create the smallest possible css for application.
+
+My plan is to: 
+
+1. Design the wasm fronted with a shared library with backed 
+2. Design the javscript frontend as similar as possible to wasm 
+3. Write CSS in the javascript frontend(hopefully js and wasm are similar enough that the css works for both
+   frontends)
+
+### Backend 
+
+- [Actix](https://github.com/actix/actix-web) 
+- [Diesel](https://github.com/diesel-rs/diesel) or [sqlx](https://github.com/launchbadge/sqlx) (undecided)
+- [Argon2](https://github.com/RustCrypto/password-hashes/tree/master/argon2)
 
 ### Conduct
 
